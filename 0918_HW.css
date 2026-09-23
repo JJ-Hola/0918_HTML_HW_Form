@@ -8,8 +8,6 @@ body {
   font-family: "Microsoft JhengHei", "Helvetica Neue";
   font-size: 14;
   font-weight: medium;
-  max-width: 1100px;
-  margin: 0 auto;
 }
 
 h1 {
@@ -36,48 +34,33 @@ h2 {
 }
 
 .form-row {
-  display: flex;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 8px 16px;
   margin: 10px 0;
 }
 
-
-.form-row label {
-  white-space: nowrap;
-}
- 
 /* 加在任一 .form-row 上，強制該排不換行 */
 .row-nowrap {
   flex-wrap: nowrap;
 }
- 
-.row-nowrap span,
-.row-nowrap label {
-  flex-shrink: 0;
-  white-space: nowrap;
-}
-#zipcode{
-    width:50px;
+
+#zipcode {
+  width: 50px;
 }
 
-#address{
-  width:600px;
+#address {
+  width: 600px;
 }
 
 .submit-btn,
 .reset {
   font-size: 14px;
   border: 1px solid #999;
-  cursor: pointer;
 }
- 
+
 .submit-btn {
   background-color: #2c3e50;
   color: white;
 }
- 
+
 .reset {
   background-color: #c0392b;
   color: white;
