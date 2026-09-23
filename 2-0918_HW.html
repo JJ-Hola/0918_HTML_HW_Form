@@ -1,0 +1,228 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>0918 HW</title>
+  <link rel="stylesheet" href="reset.css" />
+  <link rel="stylesheet" href="0918_HW.css" />
+</head>
+
+<body>
+  <h1>個人報名 Individual Registration</h1>
+  <form action="">
+
+    <div class="section">
+      <h2>基本資料 / Basic Information</h2>
+
+      <div class="form-row">
+        <label for="name">姓名 / Name<span class="required">*</span></label>
+        <input type="text" id="name" name="name" placeholder="請輸入姓名" required />
+      </div>
+
+      <div class="form-row row-nowrap">
+        <span>性別 / Gender</span>
+        <input type="radio" id="male" name="gender" value="male" />
+        <label for="male">男 / male</label>
+        <input type="radio" id="female" name="gender" value="女 / female" />
+        <label for="female">女 / female</label>
+      </div>
+
+      <div class="form-row">
+        <span>國籍 / Nationality</span>
+        <input type="radio" id="roc_citizens" name="nationality" value="本國國籍 / roc_citizens" checked />
+        <label for="roc_citizens">本國國籍 / ROC Citizens</label>
+        <input type="radio" id="non_citizens" name="nationality" value="外國國籍 / non_citizens" />
+        <label for="non_citizens">外國國籍 / Non-Citizens</label>
+      </div>
+
+      <div class="form-row">
+        <label for="id">身份證號 / ID Number<span class="required">*</span></label>
+        <input type="text" id="id" name="id" placeholder="身份證號或護照號碼" required />
+      </div>
+
+      <div class="form-row row-nowrap">
+        <span>出生日期 / Date Of Birth</span>
+        <select name="year" id="year">
+          <option value="year">年 Year</option>
+          <option value="2026">2026</option>
+          <option value="2025">2025</option>
+          <option value="2024">2024</option>
+          <option value="2023">2023</option>
+          <option value="2022">2022</option>
+          <option value="2021">2021</option>
+        </select>
+
+        <select name="month" id="month">
+          <option value="month">月 Month</option>
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+          <option value="6">6</option>
+          <option value="7">7</option>
+          <option value="8">8</option>
+          <option value="9">9</option>
+          <option value="10">10</option>
+          <option value="11">11</option>
+          <option value="12">12</option>
+        </select>
+
+        <select id="day" name="day">
+          <option value="da">日 Day</option>
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+          <option value="6">6</option>
+          <option value="7">7</option>
+          <option value="8">8</option>
+          <option value="9">9</option>
+          <option value="10">10</option>
+          <option value="11">11</option>
+          <option value="12">12</option>
+          <option value="13">13</option>
+          <option value="14">14</option>
+          <option value="15">15</option>
+          <option value="16">16</option>
+          <option value="17">17</option>
+          <option value="18">18</option>
+          <option value="19">19</option>
+          <option value="20">20</option>
+          <option value="21">21</option>
+          <option value="22">22</option>
+          <option value="23">23</option>
+          <option value="24">24</option>
+          <option value="25">25</option>
+          <option value="26">26</option>
+          <option value="27">27</option>
+          <option value="28">28</option>
+          <option value="29">29</option>
+          <option value="30">30</option>
+          <option value="31">31</option>
+        </select>
+      </div>
+
+      <div class="form-row">
+        <label for="email">電子信箱 / Email<span class="required">*</span></label>
+        <input type="email" id="email" name="email" placeholder="example@mail.com" required />
+      </div>
+
+      <div class="form-row">
+        <span>聯絡電話 / Contact Number</span>
+        <label for="mobile">手機 / Mobile</label>
+        <input type="tel" id="mobile" name="mobile" placeholder="0922053012" pattern="[0-9]{10}" />
+        <label for="home">住家 / Home</label>
+        <input type="tel" id="home" name="home" placeholder="0225855659" pattern="[0-9]" />
+        <label for="office">公司 / Office</label>
+        <input type="tel" id="office" name="office" pattern="[0-9]" />
+      </div>
+
+      <div class="form-row row-nowrap">
+        <span>通訊地址 / Mailing Address</span>
+        <select name="city" id="city">
+          <option value="">請選擇縣市別 County/City</option>
+        </select>
+
+        <select name="township" id="township">
+          <option value="">請選擇鄉鎮區別 Township</option>
+        </select>
+
+        <input type="text" id="zipcode" name="zipcode" placeholder="郵遞區號" pattern="[0-9]" />
+        <input type="text" id="address" name="address" placeholder="例如：昌吉街55號2樓206室" />
+      </div>
+
+      <div class="form-row row-nowrap">
+        <label for="emergency_contact">緊急聯絡人姓名 / Name of Emergency Contact</label>
+        <input type="text" id="emergency_contact" name="emergency_contact" />
+        <label for="emergency_relationship">關係 / Relationship</label>
+        <input type="text" id="emergency_relationship" name="emergency_relationship" />
+        <label for="emergency_tel">電話 / Phone</label>
+        <input type="tel" id="emergency_tel" name="emergency_tel" />
+      </div>
+    </div>
+
+    <div class="section">
+      <h2>競賽項目資料 / Race Category Information</h2>
+
+      <div class="form-row">
+        <input type="checkbox" name="race_inf" id="nine_km_800" value="nine_km_800" />
+        <label for="nine_km_800">9KM (NTD 800)</label>
+        <select name="size_9km" id="size_9km">
+          <option value="">請選擇衣服尺寸</option>
+          <option value="XS">XS</option>
+          <option value="S">S</option>
+          <option value="M">M</option>
+          <option value="L">L</option>
+          <option value="XL">XL</option>
+          <option value="XXL">XXL</option>
+        </select>
+      </div>
+
+      <div class="form-row">
+        <input type="checkbox" name="race_inf" id="three_km_650" value="three_km_650" />
+        <label for="three_km_650">3KM (NTD 650)</label>
+        <select name="size_3km" id="size_3km">
+          <option value="">請選擇衣服尺寸</option>
+          <option value="XS">XS</option>
+          <option value="S">S</option>
+          <option value="M">M</option>
+          <option value="L">L</option>
+          <option value="XL">XL</option>
+          <option value="XXL">XXL</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="section">
+      <h2>報到方式(二擇一) / Check-in Method</h2>
+
+      <div class="form-row">
+        <span>郵寄代理報到 / Postal delivery check-in</span>
+        <input type="radio" name="delivery" id="yes" value="yes" />
+        <label for="yes">是 / Y（需額外付費，限台灣本島）</label>
+        <input type="radio" name="delivery" id="no" value="no" checked />
+        <label for="no">否 / N</label>
+      </div>
+
+      <div class="form-row">
+        <input type="radio" name="checkin_location" id="no_add" value="no_add" checked />
+        <label for="no_add">地點：花博爭艷館（臺北市中山區玉門街1號）</label>
+        <label for="date_start">時間：</label>
+        <input type="date" id="date_start" name="date_start" />
+        <span>~</span>
+        <input type="date" id="date_end" name="date_end" />
+      </div>
+    </div>
+
+    <div class="section">
+      <h2>其他 / Others</h2>
+
+      <div class="form-row">
+        <label for="website">個人網站 / Website（選填）</label>
+        <input type="url" id="website" name="website" placeholder="https:// " />
+      </div>
+
+      <div class="form-row">
+        <label for="note">備註 / Note</label>
+        <textarea name="note" id="note" rows="5" cols="50" spellcheck="false" placeholder="如有特殊需求請於此說明"></textarea>
+      </div>
+
+      <div class="form-row">
+        <label for="avatar">上傳證件照 / Upload Photo</label>
+        <input type="file" accept="image/*" multiple id="avatar" name="avatar" />
+      </div>
+    </div>
+
+    <div class="form-row">
+      <input type="submit" value="送出報名" class="submit-btn" />
+      <input class="reset" type="reset" value="清除重填" />
+    </div>
+
+  </form>
+</body>
+
+</html>

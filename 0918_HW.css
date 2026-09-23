@@ -1,0 +1,84 @@
+/* 要引入reset.css
+頁面標題26px
+其他四個標題：文字大小18px，文字顏色白色，背景色#525c91
+四個區塊的下框線：2px solid #525c91;
+按鈕底色：#2c3e50、#c0392b，按鈕文字：14px，按鈕框線：1px solid #999 */
+
+body {
+  font-family: "Microsoft JhengHei", "Helvetica Neue";
+  font-size: 14;
+  font-weight: medium;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+h1 {
+  font-size: 26px;
+  color: white;
+  background-color: #525c91;
+  text-align: center;
+}
+
+.section {
+  border-top: 2px solid #525c91;
+}
+
+h2 {
+  font-size: 18px;
+  color: white;
+  background-color: #525c91;
+  display: inline;
+  text-decoration: 2px solid #525c91;
+}
+
+.required {
+  color: red;
+}
+
+.form-row {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px 16px;
+  margin: 10px 0;
+}
+
+
+.form-row label {
+  white-space: nowrap;
+}
+ 
+/* 加在任一 .form-row 上，強制該排不換行 */
+.row-nowrap {
+  flex-wrap: nowrap;
+}
+ 
+.row-nowrap span,
+.row-nowrap label {
+  flex-shrink: 0;
+  white-space: nowrap;
+}
+#zipcode{
+    width:50px;
+}
+
+#address{
+  width:600px;
+}
+
+.submit-btn,
+.reset {
+  font-size: 14px;
+  border: 1px solid #999;
+  cursor: pointer;
+}
+ 
+.submit-btn {
+  background-color: #2c3e50;
+  color: white;
+}
+ 
+.reset {
+  background-color: #c0392b;
+  color: white;
+}
