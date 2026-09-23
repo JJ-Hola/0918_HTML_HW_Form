@@ -31,9 +31,9 @@
 
       <div class="form-row">
         <span>國籍 / Nationality</span>
-        <input type="radio" id="roc_citizens" name="nationality" value="本國國籍 / roc_citizens" checked />
+        <input type="radio" id="roc_citizens" name="nationality" value="roc_citizens" checked />
         <label for="roc_citizens">本國國籍 / ROC Citizens</label>
-        <input type="radio" id="non_citizens" name="nationality" value="外國國籍 / non_citizens" />
+        <input type="radio" id="non_citizens" name="nationality" value="non_citizens" />
         <label for="non_citizens">外國國籍 / Non-Citizens</label>
       </div>
 
@@ -44,7 +44,7 @@
 
       <div class="form-row row-nowrap">
         <span>出生日期 / Date Of Birth</span>
-        <select name="year" id="year">
+        <select name="birth_year" id="birth_year">
           <option value="year">年 Year</option>
           <option value="2026">2026</option>
           <option value="2025">2025</option>
@@ -54,7 +54,7 @@
           <option value="2021">2021</option>
         </select>
 
-        <select name="month" id="month">
+        <select name="birth_month" id="birth_month">
           <option value="month">月 Month</option>
           <option value="1">1</option>
           <option value="2">2</option>
@@ -70,8 +70,8 @@
           <option value="12">12</option>
         </select>
 
-        <select id="day" name="day">
-          <option value="da">日 Day</option>
+        <select id="birth_day" name="birth_day">
+          <option value="day">日 Day</option>
           <option value="1">1</option>
           <option value="2">2</option>
           <option value="3">3</option>
@@ -115,23 +115,27 @@
         <span>聯絡電話 / Contact Number</span>
         <label for="mobile">手機 / Mobile</label>
         <input type="tel" id="mobile" name="mobile" placeholder="0922053012" pattern="[0-9]{10}" />
-        <label for="home">住家 / Home</label>
-        <input type="tel" id="home" name="home" placeholder="0225855659" pattern="[0-9]" />
-        <label for="office">公司 / Office</label>
-        <input type="tel" id="office" name="office" pattern="[0-9]" />
+        <label for="home_tel">住家 / Home</label>
+        <input type="tel" id="home_tel" name="home_tel" placeholder="0225855659" pattern="[0-9]{7,12}" /> 
+        <label for="office_tel">公司 / Office</label>
+        <input type="tel" id="office_tel" name="office_tel" pattern="[0-9]{7,12}" />
       </div>
 
       <div class="form-row row-nowrap">
         <span>通訊地址 / Mailing Address</span>
         <select name="city" id="city">
-          <option value="">請選擇縣市別 County/City</option>
+          <option value="choose_city">請選擇縣市別 County/City</option>
+          <option value="taipei">台北市</option>
         </select>
 
         <select name="township" id="township">
-          <option value="">請選擇鄉鎮區別 Township</option>
+          <option value="choose_township">請選擇鄉鎮區別 Township</option>
+          <option value="daan">大安區</option>
+          <option value="neihu">內湖區</option>
+          <option value="zhongzheng">中正區</option>
         </select>
 
-        <input type="text" id="zipcode" name="zipcode" placeholder="郵遞區號" pattern="[0-9]" />
+        <input type="text" id="zipcode" name="zipcode" placeholder="郵遞區號" pattern="[0-9]{3,9}" />
         <input type="text" id="address" name="address" placeholder="例如：昌吉街55號2樓206室" />
       </div>
 
@@ -149,8 +153,8 @@
       <h2>競賽項目資料 / Race Category Information</h2>
 
       <div class="form-row">
-        <input type="checkbox" name="race_inf" id="nine_km_800" value="nine_km_800" />
-        <label for="nine_km_800">9KM (NTD 800)</label>
+        <input type="checkbox" name="race_inf" id="9km_800" value="9km_800" />
+        <label for="9km_800">9KM (NTD 800)</label>
         <select name="size_9km" id="size_9km">
           <option value="">請選擇衣服尺寸</option>
           <option value="XS">XS</option>
@@ -163,8 +167,8 @@
       </div>
 
       <div class="form-row">
-        <input type="checkbox" name="race_inf" id="three_km_650" value="three_km_650" />
-        <label for="three_km_650">3KM (NTD 650)</label>
+        <input type="checkbox" name="race_inf" id="3km_650" value="3km_650" />
+        <label for="3km_650">3KM (NTD 650)</label>
         <select name="size_3km" id="size_3km">
           <option value="">請選擇衣服尺寸</option>
           <option value="XS">XS</option>
@@ -189,12 +193,12 @@
       </div>
 
       <div class="form-row">
-        <input type="radio" name="checkin_location" id="no_add" value="no_add" checked />
-        <label for="no_add">地點：花博爭艷館（臺北市中山區玉門街1號）</label>
+        <input type="radio" name="checkin_location" id="checkin_location" value="地點：花博爭艷館（臺北市中山區玉門街1號）" checked />
+        <label for="checkin_location">地點：花博爭艷館（臺北市中山區玉門街1號）</label>
         <label for="date_start">時間：</label>
-        <input type="date" id="date_start" name="date_start" />
+        <input type="date" id="date_start" name="date_start" value="2026-12-17" />
         <span>~</span>
-        <input type="date" id="date_end" name="date_end" />
+        <input type="date" id="date_end" name="date_end" value="2026-12-18" />
       </div>
     </div>
 
